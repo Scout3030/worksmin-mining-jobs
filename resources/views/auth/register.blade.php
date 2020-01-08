@@ -48,12 +48,6 @@
                         <div class="single-login-field">
                             <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="Confirmar contraseña">
                         </div>
-                        <!-- <div class="remember-row single-login-field clearfix">
-                            <p class="checkbox remember">
-                                <input class="checkbox-spin" type="checkbox" id="Freelance">
-                                <label for="Freelance"><span></span>accept terms & condition</label>
-                            </p>
-                        </div> -->
                         <div class="single-login-field">
                             <button type="submit">Registrarme</button>
                         </div>

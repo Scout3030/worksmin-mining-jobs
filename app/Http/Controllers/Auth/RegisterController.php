@@ -70,6 +70,7 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         if ($data['role_id'] == Role::COMPANY) {
+
             return User::create([
                 'role_id' => Role::COMPANY,
                 'name' => $data['name'],

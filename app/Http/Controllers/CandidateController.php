@@ -37,7 +37,12 @@ class CandidateController extends Controller
 
         $job->candidates()->attach(auth()->user()->candidate->id);
 
-        \Mail::to($job->company->user)->send(new NewApplicationToJob( $job , auth()->user()->candidate));
+        if ($job->company_id != null) {
+            \Mail::to($job->company->user)->send(new NewApplicationToJob( $job , auth()->user()->candidate));
+        }else{
+            $mail = json_decode($job->free_post_dates, true)['email'];
+            \Mail::to($mail)->send(new NewApplicationToJob( $job , auth()->user()->candidate));
+        }
 
         \Mail::to('applications@worksmin.com')->send(new NewApplicationToJob( $job , auth()->user()->candidate));
         

@@ -13,11 +13,19 @@
        <div class="col-md-9 col-lg-6">
           <div class="single-candidate-box">
              <div class="single-candidate-img">
+                @if($job->company_id != null)
                 <img src="{{$job->company->user->pathAttachment()}}" alt="{{$job->company->title}}" />
+                @else
+                <img src="{{asset('images/default_company.png')}}" alt="{{$job->free_post_dates}}" />
+                @endif
              </div>
              <div class="single-candidate-box-right">
                 <h4>{{$job->title}}</h4>
+                @if($job->company_id != null)
                 <p>{{$job->company->title}}</p>
+                @else
+                <p>@php json_decode($job->free_post_dates, true) @endphp</p>
+                @endif
                 <div class="job-details-meta">
                    <!-- <p><i class="fa fa-file-text"></i> Applications 1</p> -->
                    <p><i class="fa fa-calendar"></i> {{$job->created_at->format('d-m-Y')}}</p>
@@ -25,11 +33,13 @@
              </div>
           </div>
        </div>
+       @if($job->company_id != null)
        <div class="col-md-3 col-lg-6">
           <div class="single-candidate-action">
              <a href="{{route('company.show', $job->company->slug)}}" class="candidate-contact" target="_BLANK"><i class="fa fa-star"></i>Ver perfil de la empresa</a>
           </div>
        </div>
+       @endif
     </div>
  </div>
 </section>
@@ -80,10 +90,12 @@
              <div class="single-candidate-widget-2">
                 <h3>Detalles del trabajo</h3>
                 <ul class="job-overview">
+                    @if($job->max_salary != null)
                    <li>
                       <h4><i class="fa fa-briefcase"></i> Salario ofrecido</h4>
                       <p>S/{{round($job->min_salary, 0)}} - S/{{round($job->max_salary, 0)}}</p>
                    </li>
+                   @endif
                    <li>
                       <h4><i class="fa fa-map-marker"></i> Ubicación</h4>
                       <p>{{$job->province->province}}, {{$job->province->department->department}}</p>

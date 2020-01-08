@@ -29,6 +29,10 @@ class Job extends Model
     const APPLIED = 1;
     const REVIEWED = 2;
 
+    const FREE = 1;
+    const NORMAL = 2;
+    const PAID = 3;
+
     public function getRouteKeyName() {
 		return 'slug';
 	}

@@ -25,7 +25,7 @@ Route::get('/images/{path}/{attachment}', function($path, $attachment) {
 
 Route::get('/', 'HomeController@index')->name('home.index');
 
-Route::get('/home', 'HomeController@index')->name('home.index');
+Route::get('/home', 'HomeController@index')->name('home.index2');
 
 /*----------  search  ----------*/
 
@@ -75,17 +75,13 @@ Route::prefix('company')->group(function () {
 
 Route::post('/secondAjax', 'JobController@secondAjax')->name('second.ajax');
 
+Route::get('/free-post', 'JobController@freePost')->name('freePost');
+Route::post('/free-post', 'JobController@freePostStore')->name('freePostStore');
+
 Route::prefix('job')->group(function () {
 
-	Route::get('/free-post', function(){
-
-		return view('job.free-post');
-
-	})->name('job.freePost');
-
-	
-
 	Route::get('/{job}', 'JobController@show')->name('job.show');
+
 });
 
 Route::group(['middleware' => ['auth', 'verified']], function(){
