@@ -14,6 +14,8 @@
 
 Auth::routes();
 
+Auth::routes(['verify' => true]);
+
 Route::get('/images/{path}/{attachment}', function($path, $attachment) {
 	$file = sprintf('storage/%s/%s', $path, $attachment);
 	if(File::exists($file)) {
@@ -86,7 +88,7 @@ Route::prefix('job')->group(function () {
 	Route::get('/{job}', 'JobController@show')->name('job.show');
 });
 
-Route::group(['middleware' => ['auth']], function(){
+Route::group(['middleware' => ['auth', 'verified']], function(){
 
 	Route::prefix('dashboard')->group(function () {
 
