@@ -1,3 +1,13 @@
 {
-	"Socialite": "Ingreso con Socialite"
+	"Socialite": "Ingreso con Socialite",
+	"Reset Password Notification" : "Restablece tu contraseña",
+	"You are receiving this email because we received a password reset request for your account." : "Recibió este correo electrónico porque recibimos una solicitud de restablecimiento de contraseña para su cuenta.",
+	"Reset Password" : "Restablecer contraseña",
+	"This password reset link will expire in :count minutes." : "Este requerimiento expirará en :count minutos",
+	"Regards," : "Cordialmente,",
+	"Hello!" : "¡Hola!",
+	"If you did not request a password reset, no further action is required." : "Si no has enviado este requerimiento, ninguna acción es requerida.",
+	"Verify Email Address" : "Verifica tu dirección de correo",
+	"Please click the button below to verify your email address." : "Por favor has click en el boton de abajo para verificar tu dirección de correo",
+	"If you did not create an account, no further action is required." : "Si no has creado ninguna cuenta, obvia este mensaje."
 }
