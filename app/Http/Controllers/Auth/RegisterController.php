@@ -95,13 +95,13 @@ class RegisterController extends Controller
             Company::create([
                 'user_id' => $user->id,
                 'title' => $user->name,
-                'slug' => str_slug($user->name, '-')
+                'slug' => str_slug($user->name.'-'.strtotime(new \Carbon\Carbon()), '-')
             ]);
         }else{
             Candidate::create([
                 'user_id' => $user->id,
                 'name' => $user->name,
-                'slug' => str_slug($user->name, '-')
+                'slug' => str_slug($user->name.'-'.strtotime(new \Carbon\Carbon()), '-')
             ]);
         }
         return redirect('/');
