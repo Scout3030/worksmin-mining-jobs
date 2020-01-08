@@ -2,7 +2,7 @@
 
 @section('content')
 
-@include('partials.shared.breadcrumb', ['page' => "Regístrate"])
+<!-- @ include('partials.shared.breadcrumb', ['page' => "Regístrate"]) -->
 
 
 <!-- Login Area Start -->

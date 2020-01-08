@@ -2,7 +2,7 @@
 
 @section('content')
 
-@include('partials.shared.breadcrumb', ['page' => "Ingresa"])
+<!-- @ include('partials.shared.breadcrumb', ['page' => "Ingresa"]) -->
 
 <!-- Login Area Start -->
 <section class="jobguru-login-area section_70">

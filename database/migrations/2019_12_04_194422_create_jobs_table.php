@@ -19,7 +19,7 @@ class CreateJobsTable extends Migration
             $table->enum('type', [Job::FREE, Job::NORMAL, Job::PAID])->default(Job::NORMAL);
             $table->string('title');
             $table->text('description');
-            $table->unsignedInteger('company_id');
+            $table->unsignedInteger('company_id')->nullable();
             $table->foreign('company_id')->references('id')->on('companies');
             $table->unsignedInteger('subcategory_id');
             $table->foreign('subcategory_id')->references('id')->on('subcategories');
