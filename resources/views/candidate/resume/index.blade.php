@@ -61,6 +61,7 @@
 							</div>
 							<div class="single-resume-feild feild-flex-2">
 			                     <div class="single-input">
+
 			                        <label for="professional_title">Titulo profesional</label>
 			                        <input id="professional_title" type="text" class="form-control @error('professional_title') is-invalid @enderror" name="professional_title" value="{{ old('professional_title') ?: auth()->user()->candidate->professional_title }}" autocomplete="false">
 			                         @error('professional_title')

@@ -14,7 +14,7 @@ class Candidate extends Model
     protected $guarded = ['id'];
 
     protected $fillable = [
-        'user_id', 'name', 'last_name', 'proffesional_title', 'biography', 'slug', 'address', 'department_id', 'province_id', 'phone', 'skills', 'languages'
+        'user_id', 'name', 'last_name', 'professional_title', 'biography', 'slug', 'address', 'department_id', 'province_id', 'phone', 'skills', 'languages'
     ];
 
     public function user () {
