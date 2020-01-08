@@ -70,19 +70,20 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         if ($data['role_id'] == Role::COMPANY) {
+
             return User::create([
                 'role_id' => Role::COMPANY,
                 'name' => $data['name'],
                 'email' => $data['email'],
                 'password' => Hash::make($data['password']),
-                'picture' => 'default_user.jpg',
+                'picture' => "default_user.jpg",
             ]);
         }else{
             return User::create([
                 'name' => $data['name'],
                 'email' => $data['email'],
                 'password' => Hash::make($data['password']),
-                'picture' => 'default_user.jpg',
+                'picture' => "default_user.jpg",
             ]);
         }
     }

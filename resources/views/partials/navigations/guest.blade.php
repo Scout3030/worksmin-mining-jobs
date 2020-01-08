@@ -3,7 +3,7 @@
 		<nav id="navigation">
 		   <ul id="jobguru_navigation">
 		      <li class="has-children">
-		        <a href="{{route('job.freePost')}}" class="post-jobs">Publica gratis</a>
+		        <a href="{{route('freePost')}}" class="post-jobs">Publica gratis</a>
 		        <a href="{{route('register')}}"><i class="fa fa-user"></i>Regístrate</a>
 		        <a href="{{route('login')}}"><i class="fa fa-lock"></i>Ingresa</a>
 		      </li>
@@ -14,7 +14,7 @@
 <div class="col-lg-4 offset-lg-6">
    <div class="header-right-menu">
       <ul>
-        <li><a href="{{route('job.freePost')}}" class="post-jobs">Publica gratis</a></li>
+        <li><a href="{{route('freePost')}}" class="post-jobs">Publica gratis</a></li>
         <li><a href="{{route('register')}}"><i class="fa fa-user"></i>Regístrate</a></li>
 		<li><a href="{{route('login')}}"><i class="fa fa-lock"></i>Ingresa</a></li>
       </ul>

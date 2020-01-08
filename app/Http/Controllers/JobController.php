@@ -6,6 +6,7 @@ use App\Category;
 use App\Department;
 use App\Helpers\Helper;
 use App\Http\Requests\NewPostRequest;
+use App\Http\Requests\FreePostRequest;
 use App\Job;
 use App\Province;
 use App\Subcategory;
@@ -239,5 +240,22 @@ class JobController extends Controller
                 return 'nothing';
         }
         return $data;
+    }
+
+    public function freePost()
+    {
+        return view('job.free-post');
+    }
+
+    public function freePostStore(FreePostRequest $request)
+    {
+        $dates = array('company' => $request['company'], 'ruc' => $request['ruc'],'email' => $request['email'], 'phone' => $request['phone']);
+        $request->merge(['free_post_dates' => json_encode($dates)]);
+        $request->merge(['type' => Job::FREE]);
+        $request->merge(['slug' => str_slug($request['title'], '-')]);
+        $input = $request->except(['category_id', 'department_id', 'company', 'ruc', 'phone', 'email']);
+        Job::create($input);
+
+        return back()->with('message', ['status' => 'success', 'message' => "El anuncio de empleo ha sido recibido, pronto será publicado."]);
     }
 }

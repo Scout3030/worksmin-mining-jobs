@@ -16,6 +16,7 @@ class CreateJobsTable extends Migration
     {
         Schema::create('jobs', function (Blueprint $table) {
             $table->increments('id');
+            $table->enum('type', [Job::FREE, Job::NORMAL, Job::PAID])->default(Job::NORMAL);
             $table->string('title');
             $table->text('description');
             $table->unsignedInteger('company_id');
@@ -34,6 +35,7 @@ class CreateJobsTable extends Migration
             $table->enum('status', [Job::PUBLISHED, Job::PENDING, Job::REJECTED])->default(Job::PENDING);
             $table->boolean('previous_approved')->default(false);
             $table->boolean('previous_rejected')->default(false);
+            $table->string('free_post_dates')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

@@ -6,6 +6,8 @@
 			Postulaste a este aviso
 		</a>
 	</div>
+	@elseif(auth()->user()->company)
+
 	@else
 	<div class="single-candidate-widget-2">
 		<a href="{{route('candidate.apply', $job->slug)}}" class="jobguru-btn-2">
