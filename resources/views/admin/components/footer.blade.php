@@ -1,36 +1,8 @@
-<div class="app-wrapper-footer">
-    <div class="app-footer">
-        <div class="app-footer__inner">
-            <div class="app-footer-left">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a href="javascript:void(0);" class="nav-link">
-                            Footer Link 1
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="javascript:void(0);" class="nav-link">
-                            Footer Link 2
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="app-footer-right">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a href="javascript:void(0);" class="nav-link">
-                            Footer Link 3
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="javascript:void(0);" class="nav-link">
-                            <div class="badge badge-success mr-1 ml-0">
-                                <small>NEW</small>
-                            </div>
-                            Footer Link 4
-                        </a>
-                    </li>
-                </ul>
+<div class="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                 Copyright © 2020 Worksmin. Derechos reservados <a href="javascript:void(0)">Worksmin</a>.
             </div>
         </div>
     </div>

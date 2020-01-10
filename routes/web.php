@@ -148,10 +148,13 @@ Route::post('/fast-mail/{job}', 'CompanyController@fastMail')->name('job.fast_ma
 Route::prefix('admin')->group(function () {
 
 	Route::group(['middleware' => ['auth']], function(){
+
 		Route::get('/', 'AdminController@index')->name('admin.index');
+
 		Route::prefix('company')->group(function () {
-			Route::get('/create', 'AdminController@companyCreate')->name('admin.company.create');
-			Route::post('/create', 'AdminController@companyStore')->name('admin.company.store');
+			Route::get('/new', 'AdminController@companyNew')->name('company.new.index');
 		});
+
 	});
+
 });

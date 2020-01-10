@@ -1,261 +1,81 @@
-<div class="app-sidebar sidebar-shadow">
-    <div class="app-header__logo">
-        <div class="logo-src"></div>
-        <div class="header__pane ml-auto">
-            <div>
-                <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
-                    <span class="hamburger-box">
-                        <span class="hamburger-inner"></span>
-                    </span>
-                </button>
+<div class="nav-left-sidebar sidebar-dark">
+    <div class="menu-list">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav flex-column">
+                    <li class="nav-divider">
+                        Menu
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success">6</span></a>
+                        <div id="submenu-1" class="collapse submenu" style="">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-2" aria-controls="submenu-1-2">E-Commerce</a>
+                                    <div id="submenu-1-2" class="collapse submenu" style="">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="index.html">E Commerce Dashboard</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="ecommerce-product.html">Product List</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="ecommerce-product-single.html">Product Single</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="ecommerce-product-checkout.html">Product Checkout</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="dashboard-finance.html">Finance</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="dashboard-sales.html">Sales</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-1" aria-controls="submenu-1-1">Infulencer</a>
+                                    <div id="submenu-1-1" class="collapse submenu" style="">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="dashboard-influencer.html">Influencer</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="influencer-finder.html">Influencer Finder</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="influencer-profile.html">Influencer Profile</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-divider">
+                        Empresas
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i class="fas fa-fw fa-table"></i>Nuevas</a>
+                        <div id="submenu-5" class="collapse submenu" style="">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('company.new.index')}}">Esperando confirmación</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="pages/data-tables.html">Data Tables</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
             </div>
-        </div>
+        </nav>
     </div>
-    <div class="app-header__mobile-menu">
-        <div>
-            <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
-            </button>
-        </div>
-    </div>
-    <div class="app-header__menu">
-        <span>
-            <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
-                <span class="btn-icon-wrapper">
-                    <i class="fa fa-ellipsis-v fa-w-6"></i>
-                </span>
-            </button>
-        </span>
-    </div>    
-
-
-
-    <div class="scrollbar-sidebar">
-        <div class="app-sidebar__inner">
-            <ul class="vertical-nav-menu">
-                <li class="app-sidebar__heading">Dashboards</li>
-                    <li>
-                        <a href="index.html" class="mm-active">
-                            <i class="metismenu-icon pe-7s-rocket"></i>
-                            Dashboard
-                        </a>
-                    </li>
-                <li class="app-sidebar__heading">EMPRESAS</li>
-                <li>
-                    <a href="#">
-                            <i class="metismenu-icon pe-7s-diamond"></i>
-                            Ofertas
-                            <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
-                        </a>
-                        <ul>
-                            <li>
-                                <a href="{{route('admin.offert.create')}}">
-                                    <i class="metismenu-icon"></i>
-                                    Crear oferta
-                                </a>
-                            </li>
-                        </ul>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                            <i class="metismenu-icon pe-7s-diamond"></i>
-                            Empresas
-                            <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
-                        </a>
-                        <ul>
-                            <li>
-                                <a href="{{route('admin.company.create')}}">
-                                    <i class="metismenu-icon"></i>
-                                    Crear empresa
-                                </a>
-                            </li>
-                        </ul>
-                    </a>
-                </li>
-                <li class="app-sidebar__heading">UI Components</li>
-                <li>
-                    <a href="#">
-                        <i class="metismenu-icon pe-7s-diamond"></i>
-                        Elements
-                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
-                    </a>
-                    <ul>
-                        <li>
-                            <a href="elements-buttons-standard.html">
-                                <i class="metismenu-icon"></i>
-                                Buttons
-                            </a>
-                        </li>
-                        <li>
-                            <a href="elements-dropdowns.html">
-                                <i class="metismenu-icon">
-                                </i>Dropdowns
-                            </a>
-                        </li>
-                        <li>
-                            <a href="elements-icons.html">
-                                <i class="metismenu-icon">
-                                </i>Icons
-                            </a>
-                        </li>
-                        <li>
-                            <a href="elements-badges-labels.html">
-                                <i class="metismenu-icon">
-                                </i>Badges
-                            </a>
-                        </li>
-                        <li>
-                            <a href="elements-cards.html">
-                                <i class="metismenu-icon">
-                                </i>Cards
-                            </a>
-                        </li>
-                        <li>
-                            <a href="elements-list-group.html">
-                                <i class="metismenu-icon">
-                                </i>List Groups
-                            </a>
-                        </li>
-                        <li>
-                            <a href="elements-navigation.html">
-                                <i class="metismenu-icon">
-                                </i>Navigation Menus
-                            </a>
-                        </li>
-                        <li>
-                            <a href="elements-utilities.html">
-                                <i class="metismenu-icon">
-                                </i>Utilities
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="metismenu-icon pe-7s-car"></i>
-                        Components
-                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
-                    </a>
-                    <ul>
-                        <li>
-                            <a href="components-tabs.html">
-                                <i class="metismenu-icon">
-                                </i>Tabs
-                            </a>
-                        </li>
-                        <li>
-                            <a href="components-accordions.html">
-                                <i class="metismenu-icon">
-                                </i>Accordions
-                            </a>
-                        </li>
-                        <li>
-                            <a href="components-notifications.html">
-                                <i class="metismenu-icon">
-                                </i>Notifications
-                            </a>
-                        </li>
-                        <li>
-                            <a href="components-modals.html">
-                                <i class="metismenu-icon">
-                                </i>Modals
-                            </a>
-                        </li>
-                        <li>
-                            <a href="components-progress-bar.html">
-                                <i class="metismenu-icon">
-                                </i>Progress Bar
-                            </a>
-                        </li>
-                        <li>
-                            <a href="components-tooltips-popovers.html">
-                                <i class="metismenu-icon">
-                                </i>Tooltips &amp; Popovers
-                            </a>
-                        </li>
-                        <li>
-                            <a href="components-carousel.html">
-                                <i class="metismenu-icon">
-                                </i>Carousel
-                            </a>
-                        </li>
-                        <li>
-                            <a href="components-calendar.html">
-                                <i class="metismenu-icon">
-                                </i>Calendar
-                            </a>
-                        </li>
-                        <li>
-                            <a href="components-pagination.html">
-                                <i class="metismenu-icon">
-                                </i>Pagination
-                            </a>
-                        </li>
-                        <li>
-                            <a href="components-scrollable-elements.html">
-                                <i class="metismenu-icon">
-                                </i>Scrollable
-                            </a>
-                        </li>
-                        <li>
-                            <a href="components-maps.html">
-                                <i class="metismenu-icon">
-                                </i>Maps
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li  >
-                    <a href="tables-regular.html">
-                        <i class="metismenu-icon pe-7s-display2"></i>
-                        Tables
-                    </a>
-                </li>
-                <li class="app-sidebar__heading">Widgets</li>
-                    <li>
-                        <a href="dashboard-boxes.html">
-                            <i class="metismenu-icon pe-7s-display2"></i>
-                            Dashboard Boxes
-                        </a>
-                    </li>
-                <li class="app-sidebar__heading">Forms</li>
-                <li>
-                    <a href="forms-controls.html">
-                        <i class="metismenu-icon pe-7s-mouse">
-                        </i>Forms Controls
-                    </a>
-                </li>
-                <li>
-                    <a href="forms-layouts.html">
-                        <i class="metismenu-icon pe-7s-eyedropper">
-                        </i>Forms Layouts
-                    </a>
-                </li>
-                <li>
-                    <a href="forms-validation.html">
-                        <i class="metismenu-icon pe-7s-pendrive">
-                        </i>Forms Validation
-                    </a>
-                </li>
-                <li class="app-sidebar__heading">Charts</li>
-                <li>
-                    <a href="charts-chartjs.html">
-                        <i class="metismenu-icon pe-7s-graph2">
-                        </i>ChartJS
-                    </a>
-                </li>
-                <li class="app-sidebar__heading">PRO Version</li>
-                <li>
-                    <a href="https://dashboardpack.com/theme-details/architectui-dashboard-html-pro/" target="_blank">
-                        <i class="metismenu-icon pe-7s-graph2">
-                        </i>
-                        Upgrade to PRO
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div> 
+</div>

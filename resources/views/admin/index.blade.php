@@ -6,39 +6,104 @@
 
 @section('content')
 
-@include('admin.partials.breadcrumb', ['icon' => "pe-7s-ribbon", 
-										'title' => "Administra las ofertas", 
-										'description' => "Crea, edita o elimina las actuales ofertas"])
+@include('admin.partials.breadcrumb', ['title' => "Panel de administración", 
+										'description' => "Haz lo que quieras"])
 
-<div class="main-card mb-3 card">
-    <div class="card-body"><h5 class="card-title">Grid Rows</h5>
-        <form class="">
-            <div class="form-row">
-                <div class="col-md-6">
-                    <div class="position-relative form-group"><label for="exampleEmail11" class="">Email</label><input name="email" id="exampleEmail11" placeholder="with a placeholder" type="email" class="form-control"></div>
-                </div>
-                <div class="col-md-6">
-                    <div class="position-relative form-group"><label for="examplePassword11" class="">Password</label><input name="password" id="examplePassword11" placeholder="password placeholder" type="password" class="form-control"></div>
-                </div>
+<div class="row">
+    <!-- ============================================================== -->
+    <!-- total revenue  -->
+    <!-- ============================================================== -->
+
+    <div class="col-xl-9 col-lg-7 col-md-12 col-sm-12 col-12">
+        <div class="card">
+            <h5 class="card-header"> Empresas registradas</h5>
+            <div class="card-body">
+                <div id="morris_totalrevenue"></div>
             </div>
-            <div class="position-relative form-group"><label for="exampleAddress" class="">Address</label><input name="address" id="exampleAddress" placeholder="1234 Main St" type="text" class="form-control"></div>
-            <div class="position-relative form-group"><label for="exampleAddress2" class="">Address 2</label><input name="address2" id="exampleAddress2" placeholder="Apartment, studio, or floor" type="text" class="form-control">
+            <div class="card-footer">
+                <p class="display-7 font-weight-bold"><span class="text-primary d-inline-block">$26,000</span><span class="text-success float-right">+9.45%</span></p>
             </div>
-            <div class="form-row">
-                <div class="col-md-6">
-                    <div class="position-relative form-group"><label for="exampleCity" class="">City</label><input name="city" id="exampleCity" type="text" class="form-control"></div>
-                </div>
-                <div class="col-md-4">
-                    <div class="position-relative form-group"><label for="exampleState" class="">State</label><input name="state" id="exampleState" type="text" class="form-control"></div>
-                </div>
-                <div class="col-md-2">
-                    <div class="position-relative form-group"><label for="exampleZip" class="">Zip</label><input name="zip" id="exampleZip" type="text" class="form-control"></div>
-                </div>
-            </div>
-            <div class="position-relative form-check"><input name="check" id="exampleCheck" type="checkbox" class="form-check-input"><label for="exampleCheck" class="form-check-label">Check me out</label></div>
-            <button class="mt-2 btn btn-primary">Sign in</button>
-        </form>
+        </div>
     </div>
+
+    <!-- ============================================================== -->
+    <!-- sales traffic country source  -->
+    <!-- ============================================================== -->
+    <div class="col-xl-3 col-lg-12 col-md-6 col-sm-12 col-12">
+        <div class="card">
+            <h5 class="card-header">Empresas según región</h5>
+            <div class="card-body p-0">
+                <ul class="country-sales list-group list-group-flush">
+                    <li class="country-sales-content list-group-item"><span class="mr-2"><i class="flag-icon flag-icon-us" title="us" id="us"></i> </span>
+                        <span class="">United States</span><span class="float-right text-dark">78%</span>
+                    </li>
+                    <li class="list-group-item country-sales-content"><span class="mr-2"><i class="flag-icon flag-icon-ca" title="ca" id="ca"></i></span><span class="">Canada</span><span class="float-right text-dark">7%</span>
+                    </li>
+                    <li class="list-group-item country-sales-content"><span class="mr-2"><i class="flag-icon flag-icon-ru" title="ru" id="ru"></i></span><span class="">Russia</span><span class="float-right text-dark">4%</span>
+                    </li>
+                    <li class="list-group-item country-sales-content"><span class=" mr-2"><i class="flag-icon flag-icon-in" title="in" id="in"></i></span><span class="">India</span><span class="float-right text-dark">12%</span>
+                    </li>
+                    <li class="list-group-item country-sales-content"><span class=" mr-2"><i class="flag-icon flag-icon-fr" title="fr" id="fr"></i></span><span class="">France</span><span class="float-right text-dark">16%</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-footer text-center">
+                <a href="#" class="btn-primary-link">View Details</a>
+            </div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- end sales traffice country source  -->
+    <!-- ============================================================== -->
+</div>
+
+
+<div class="row">
+    <!-- ============================================================== -->
+    <!-- total revenue  -->
+    <!-- ============================================================== -->
+
+    <div class="col-xl-9 col-lg-7 col-md-12 col-sm-12 col-12">
+        <div class="card">
+            <h5 class="card-header"> Candidatos registrados</h5>
+            <div class="card-body">
+                <div id="morris_totalrevenue"></div>
+            </div>
+            <div class="card-footer">
+                <p class="display-7 font-weight-bold"><span class="text-primary d-inline-block">$26,000</span><span class="text-success float-right">+9.45%</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- sales traffic country source  -->
+    <!-- ============================================================== -->
+    <div class="col-xl-3 col-lg-12 col-md-6 col-sm-12 col-12">
+        <div class="card">
+            <h5 class="card-header">Candidatos según región</h5>
+            <div class="card-body p-0">
+                <ul class="country-sales list-group list-group-flush">
+                    <li class="country-sales-content list-group-item"><span class="mr-2"><i class="flag-icon flag-icon-us" title="us" id="us"></i> </span>
+                        <span class="">United States</span><span class="float-right text-dark">78%</span>
+                    </li>
+                    <li class="list-group-item country-sales-content"><span class="mr-2"><i class="flag-icon flag-icon-ca" title="ca" id="ca"></i></span><span class="">Canada</span><span class="float-right text-dark">7%</span>
+                    </li>
+                    <li class="list-group-item country-sales-content"><span class="mr-2"><i class="flag-icon flag-icon-ru" title="ru" id="ru"></i></span><span class="">Russia</span><span class="float-right text-dark">4%</span>
+                    </li>
+                    <li class="list-group-item country-sales-content"><span class=" mr-2"><i class="flag-icon flag-icon-in" title="in" id="in"></i></span><span class="">India</span><span class="float-right text-dark">12%</span>
+                    </li>
+                    <li class="list-group-item country-sales-content"><span class=" mr-2"><i class="flag-icon flag-icon-fr" title="fr" id="fr"></i></span><span class="">France</span><span class="float-right text-dark">16%</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-footer text-center">
+                <a href="#" class="btn-primary-link">View Details</a>
+            </div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- end sales traffice country source  -->
+    <!-- ============================================================== -->
 </div>
 
 @endsection

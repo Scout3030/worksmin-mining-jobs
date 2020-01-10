@@ -9,19 +9,15 @@
 
     <title>{{ config('app.name', 'Agenda Minera Perú | Admin') }}</title>
 
-    <meta name="description" content="This is an example dashboard created using build-in elements and components.">
-    <meta name="msapplication-tap-highlight" content="no">
-    <!--
-    =========================================================
-    * ArchitectUI HTML Theme Dashboard - v1.0.0
-    =========================================================
-    * Product Page: https://dashboardpack.com
-    * Copyright 2019 DashboardPack (https://dashboardpack.com)
-    * Licensed under MIT (https://github.com/DashboardPack/architectui-html-theme-free/blob/master/LICENSE)
-    =========================================================
-    * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-    -->
-    <link href="{{asset('admin.assets/css/main.css')}}" rel="stylesheet"></head>
+    <link rel="stylesheet" href="{{asset('admin.assets/vendor/bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('admin.assets/vendor/fonts/circular-std/style.css')}}">
+    <link rel="stylesheet" href="{{asset('admin.assets/libs/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('admin.assets/vendor/fonts/fontawesome/css/fontawesome-all.css')}}">
+    <link rel="stylesheet" href="{{asset('admin.assets/vendor/charts/chartist-bundle/chartist.css')}}">
+    <link rel="stylesheet" href="{{asset('admin.assets/vendor/charts/morris-bundle/morris.css')}}">
+    <link rel="stylesheet" href="{{asset('admin.assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css')}}">
+    <link rel="stylesheet" href="{{asset('admin.assets/vendor/charts/c3charts/c3.css')}}">
+    <link rel="stylesheet" href="{{asset('admin.assets/vendor/fonts/flag-icon-css/flag-icon.min.css')}}">
 
     @stack('styles')
 
@@ -33,36 +29,70 @@
 </head>
 <body>
     <div id="app">
-
-        <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
-
+        <!-- ============================================================== -->
+        <!-- main wrapper -->
+        <!-- ============================================================== -->
+        <div class="dashboard-main-wrapper">
+            <!-- ============================================================== -->
+            <!-- navbar -->
+            <!-- ============================================================== -->
             @include('admin.components.header')
-
-            @include('admin.components.options')
-
-            <div class="app-main">
-
-                @include('admin.components.sidebar')   
-
-                <div class="app-main__outer">
-
-                    <div class="app-main__inner">
-
+            <!-- ============================================================== -->
+            <!-- end navbar -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- left sidebar -->
+            <!-- ============================================================== -->
+            @include('admin.components.sidebar')
+            <!-- ============================================================== -->
+            <!-- end left sidebar -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- wrapper  -->
+            <!-- ============================================================== -->
+            <div class="dashboard-wrapper">
+                <div class="dashboard-ecommerce">
+                    <div class="container-fluid dashboard-content ">
                         @yield('content')
-
                     </div>
-
-                    @include('admin.components.footer') 
-
-                </div>  
-
+                </div>
+                <!-- ============================================================== -->
+                <!-- footer -->
+                <!-- ============================================================== -->
+                @include('admin.components.footer')
+                <!-- ============================================================== -->
+                <!-- end footer -->
+                <!-- ============================================================== -->
             </div>
-
+            <!-- ============================================================== -->
+            <!-- end wrapper  -->
+            <!-- ============================================================== -->
         </div>
+
+                    
         
     </div>
-    
-    <script type="text/javascript" src="{{asset('admin.assets/scripts/main.js')}}"></script></body>
+
+    <!-- jquery 3.3.1 -->
+    <script src="{{asset('admin.assets/vendor/jquery/jquery-3.3.1.min.js')}}"></script>
+    <!-- bootstap bundle js -->
+    <script src="{{asset('admin.assets/vendor/bootstrap/js/bootstrap.bundle.js')}}"></script>
+    <!-- slimscroll js -->
+    <script src="{{asset('admin.assets/vendor/slimscroll/jquery.slimscroll.js')}}"></script>
+    <!-- main js -->
+    <script src="{{asset('admin.assets/libs/js/main-js.js')}}"></script>
+    <!-- chart chartist js -->
+    <script src="{{asset('admin.assets/vendor/charts/chartist-bundle/chartist.min.js')}}"></script>
+    <!-- sparkline js -->
+    <script src="{{asset('admin.assets/vendor/charts/sparkline/jquery.sparkline.js')}}"></script>
+    <!-- morris js -->
+    <script src="{{asset('admin.assets/vendor/charts/morris-bundle/raphael.min.js')}}"></script>
+    <script src="{{asset('admin.assets/vendor/charts/morris-bundle/morris.js')}}"></script>
+    <!-- chart c3 js -->
+    <script src="{{asset('admin.assets/vendor/charts/c3charts/c3.min.js')}}"></script>
+    <script src="{{asset('admin.assets/vendor/charts/c3charts/d3-5.4.0.min.js')}}"></script>
+    <script src="{{asset('admin.assets/vendor/charts/c3charts/C3chartjs.js')}}"></script>
+    <script src="{{asset('admin.assets/libs/js/dashboard-ecommerce.js')}}"></script>
 
     @stack('scripts')
 </body>
