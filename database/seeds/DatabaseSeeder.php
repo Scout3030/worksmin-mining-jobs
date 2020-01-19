@@ -169,10 +169,18 @@ class DatabaseSeeder extends Seeder
             'slug' => 'ucayali'
         ]);
 
+        factory(App\Province::class, 30)->create();
+
         factory(App\Province::class, 1)->create([
             'department_id' => 1,
             'province' => 'Sanchez Carrión'
             'slug' => 'sanchez-carrion'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 1,
+            'province' => 'Trujillo'
+            'slug' => 'trujillo'
         ]);
 
         factory(App\Skill::class, 20)->create();

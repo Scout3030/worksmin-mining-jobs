@@ -60,7 +60,7 @@
 			                     </div>
 							</div>
 							<div class="single-resume-feild feild-flex-2">
-			                     <div class="single-input">
+			                    <div class="single-input">
 
 			                        <label for="professional_title">Titulo profesional</label>
 			                        <input id="professional_title" type="text" class="form-control @error('professional_title') is-invalid @enderror" name="professional_title" value="{{ old('professional_title') ?: auth()->user()->candidate->professional_title }}" autocomplete="false">
@@ -69,19 +69,52 @@
 			                             <strong>{{ $message }}</strong>
 			                         </span>
 			                         @enderror
-			                     </div>
-			                     <div class="single-input single-job-sidebar sidebar-keywords">
+			                    </div>
+			                    <div class="single-input single-job-sidebar sidebar-keywords">
 			                        <label for="languages">Idiomas</label>
 			                        <select class="sidebar-category-select" name="languages[]" multiple="multiple" id="languages">
+			                           @if(!auth()->user()->candidate->languages)
 			                           <option value="1" 
 			                           >Español</option>
 			                           <option value="2"
 			                           >Inglés</option>
 			                           <option value="3"
 			                           >Francés</option>
+			                           @else
+									   <option value="1"  
+										@php 
+				                        $languages = explode(',', auth()->user()->candidate->languages);
+				                        for($i = 0; $i < count($languages); $i++){
+											if($languages[$i] == 1){
+												echo ' selected';
+											}
+				                    	} 
+				                        @endphp
+									   >Español</option>
+			                           <option value="2" 
+										@php 
+				                        $languages = explode(',', auth()->user()->candidate->languages);
+				                        for($i = 0; $i < count($languages); $i++){
+											if($languages[$i] == 2){
+												echo ' selected';
+											}
+				                    	} 
+				                        @endphp
+			                           >Inglés</option>
+			                           <option value="3" 
+										@php 
+				                        $languages = explode(',', auth()->user()->candidate->languages);
+				                        for($i = 0; $i < count($languages); $i++){
+											if($languages[$i] == 3){
+												echo ' selected';
+											}
+				                    	} 
+				                        @endphp
+			                           >Francés</option>
+			                           @endif
 			                        </select>
-			                     </div>
-			                  </div>
+			                    </div>
+			                </div>
 							<div class="single-resume-feild feild-flex-2">
 								<div class="single-input">
 			                        <label for="address">Dirección</label>

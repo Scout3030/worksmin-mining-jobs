@@ -81,17 +81,15 @@ class CandidateController extends Controller
 
     public function updateResume(Request $request)
     {
-        // dd($request->all());
         $candidate = Candidate::whereId(auth()->user()->candidate->id)->first();
         if($request->hasFile('picture')) {
-            // dd($request->all());
             \Storage::delete('users/' . $candidate->user->picture);
             $picture = Helper::uploadFile( "picture", 'users');
             $candidate->user->picture = $picture;
             $candidate->user->save();
         }
-       
-        $request->merge(['languages' => json_encode($request['languages'])]);
+        
+        $request->merge(['languages' => implode($request['languages'], ',')]);
         $candidate->fill($request->input())->save();
 
         return back()->with('message', ['status' => 'success', 'message' => "Datos de contacto actualizados correctamente"]);

@@ -23,9 +23,11 @@ Route::get('/images/{path}/{attachment}', function($path, $attachment) {
 	}
 });
 
-Route::get('/', 'HomeController@index')->name('home.index');
+Route::get('/', 'JobController@index')->name('home.index');
+// Route::get('/', 'HomeController@index')->name('home.index');
 
-Route::get('/home', 'HomeController@index')->name('home.index2');
+Route::get('/home', 'JobController@index')->name('home.index2');
+// Route::get('/home', 'HomeController@index')->name('home.index2');
 
 /*----------  search  ----------*/
 

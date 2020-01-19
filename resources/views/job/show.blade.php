@@ -1,6 +1,80 @@
 @extends('layouts.app')
 
+@push('metas')
+
+<!-- =============================================
+=                   GOOGLE                   =
+============================================= -->
+
+<meta data-rh="true" content="{{$job->title}}" property="og:title"/>
+<meta data-rh="true" content="{{$job->description}}" name="description"/>
+<meta data-rh="true" content="{{$job->company_id ? $job->company->pathAttachment() : asset('images/default-company.png')}}" property="og:image"/>
+<meta data-rh="true" content="{{route('job.show', $job->slug)}}" property="og:url"/>
+<meta data-rh="true" content="rgb(154, 21, 32)" name="theme-color"/>
+
+<!-- =============================================
+=                  FACEBOOK                   =
+============================================= -->
+
+<meta property="og:title"   content="{{$job->title}}">
+<meta property="og:url" content="{{route('job.show', $job->slug)}}">
+<meta property="og:description" content="{{$job->description}}">
+<meta property="og:image"  content="{{$job->company_id ? $job->company->pathAttachment() : asset('images/default-company.png')}}">
+<meta property="fb:app_id" content="2117440978352810">
+<meta property="og:type"  content="website">  
+<meta property="og:site_name" content="Worksmin | Empleos en minería, en todo el Perú.">
+<meta property="og:locale" content="es_PE">
+
+<!-- <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : '600219774152515',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v5.0'
+    });
+  };
+</script>
+<script async defer src="https://connect.facebook.net/en_US/sdk.js"></script> -->
+
+@endpush
+
+@section('title')
+{{$job->title}} -
+@endsection 
+
 @push('styles')
+
+<script data-rh="true" type="application/ld+json">
+{
+  "@context" : "https://schema.org/",
+  "@type" : "JobPosting",
+  "title" : "{{$job->title}}",
+  "description" : "<p>{{$job->description}}</p>",
+  "identifier": {
+    "@type": "PropertyValue",
+    "name": "MagsRUs Wheel Company",
+    "value": "1234567"
+  },
+  "datePosted" : "{{$job->created_at->format('Y-m-d')}}",
+  "validThrough" : "2017-03-18T00:00",
+  "employmentType" : "CONTRACTOR",
+  "hiringOrganization" : {
+    "@type" : "Organization",
+    "name" : "{{$job->company_id ? $company->title : json_decode($job->free_post_dates, true)['company']}}",
+    "sameAs" : "http://www.google.com",
+    "logo" : "{{$job->company_id ? $job->company->pathAttachment() : asset('images/default-company.png')}}"
+  },
+  "jobLocation": {
+  "@type": "Place",
+    "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "{{$job->province->department->department}}",
+    "addressCountry": "PE"
+    }
+  }
+}
+</script>
 
 @endpush
 
@@ -16,15 +90,15 @@
                 @if($job->company_id != null)
                 <img src="{{$job->company->user->pathAttachment()}}" alt="{{$job->company->title}}" />
                 @else
-                <img src="{{asset('images/default_company.png')}}" alt="{{$job->free_post_dates}}" />
+                <img src="{{asset('images/default-company.png')}}" alt="{{$job->free_post_dates}}" />
                 @endif
              </div>
              <div class="single-candidate-box-right">
                 <h4>{{$job->title}}</h4>
-                @if($job->company_id != null)
+                @if($job->company_id)
                 <p>{{$job->company->title}}</p>
                 @else
-                <p>@php json_decode($job->free_post_dates, true) @endphp</p>
+                <p>@php echo json_decode($job->free_post_dates, true)['company']; @endphp</p>
                 @endif
                 <div class="job-details-meta">
                    <!-- <p><i class="fa fa-file-text"></i> Applications 1</p> -->
@@ -63,14 +137,14 @@
                 <h3>Descripción de la oferta de empleo</h3>
                 <p>{{$job->description}}</p>
              </div>
-             <!-- <div class="single-candidate-widget clearfix">
-                <h3>Comparte este post</h3>
+<!--              <div class="single-candidate-widget clearfix">
+                <h3>Comparte esta oferta de empleo</h3>
                 <ul class="share-job">
-                   <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                   <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                   <li><a href="javascript:void(0)"><i class="fa fa-facebook btn-facebook"></i></a></li> -->
+<!--                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                   <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                </ul>
+                   <li><a href="#"><i class="fa fa-pinterest"></i></a></li> -->
+<!--                 </ul>
              </div> -->
              <div class="single-candidate-widget">
                 <h3>Ofertas similares</h3>
@@ -121,5 +195,15 @@
 @endsection
 
 @push('scripts')
+
+<!-- <script>
+  $('.btn-facebook').click(function(){
+    console.log('Hola prro');
+    FB.ui({
+      method: 'share',
+      href: 'https://developers.facebook.com/docs/',
+    }, function(response){});
+  })
+</script> -->
 
 @endpush

@@ -7,7 +7,9 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Agenda Minera Perú') }}</title>
+    @stack('metas')
+
+    <title>@yield('title') Worksmin</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="{{asset('assets/img/favicon/favicon-32x32.png')}}">
