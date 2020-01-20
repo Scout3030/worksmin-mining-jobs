@@ -194,7 +194,7 @@
 						<div class="single-resume-feild ">
 							<div class="single-input">
 								<label for="degree">{{$education->degree}}</label>
-								<a href="" class="btn btn-light" title="Editar"><i class="fa fa-edit"></i></a>
+								<a href="#" class="btn btn-light btn-edit" title="Editar" route="{{ route('candidate.education.edit', $education->id) }}"><i class="fa fa-edit"></i></a>
 								<a href="{{ route('candidate.education.destroy', $education->id) }}"
 							       onclick="event.preventDefault();
 							       document.getElementById('delete-education-form').submit();"
@@ -437,6 +437,79 @@
   	</div>
 </div>
 
+
+
+<!-- Modal EDIT EDUCATION-->
+<div class="modal fade" id="modalEditEducation" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    	<div class="modal-content">
+	      	<div class="modal-body">
+		        <form action="#" method="POST" id="formEditEducation" novalidate>
+		        	@csrf
+		        	@method('put')
+					<div class="single-resume-feild ">
+						<div class="single-input">
+							<label for="editDegree">Grado obtenido</label>
+							<input id="editDegree" type="text" class="form-control @error('degree') is-invalid @enderror" name="degree" value="{{ old('degree')}}" autocomplete="false" placeholder="Grado obtenido">
+							@error('degree')
+							<span class="invalid-feedback" role="alert">
+								<strong>{{ $message }}</strong>
+							</span>
+							@enderror
+						</div>
+					</div>
+					<div class="single-resume-feild feild-flex-2">
+						<div class="single-input">
+							<label for="editE_from">Desde</label>
+							<input type="text" id="editE_from" class="datepicker form-control @error('e_from') is-invalid @enderror" name="e_from">
+							@error('e_from')
+							<span class="invalid-feedback" role="alert">
+								<strong>{{ $message }}</strong>
+							</span>
+							@enderror
+						</div>
+						<div class="single-input">
+							<label for="editE_to">Hasta</label>
+							<input type="text" id="editE_to" class="datepicker form-control @error('e_to') is-invalid @enderror" name="e_to">
+							@error('e_to')
+							<span class="invalid-feedback" role="alert">
+								<strong>{{ $message }}</strong>
+							</span>
+							@enderror
+						</div>
+					</div>
+					<div class="single-resume-feild ">
+						<div class="single-input">
+							<label for="editInstitution"> Institución:</label>
+							<input id="editInstitution" type="text" class="form-control @error('institution') is-invalid @enderror" name="institution" value="{{ old('institution') }}" autocomplete="false" placeholder="Institución">
+							@error('institution')
+							<span class="invalid-feedback" role="alert">
+								<strong>{{ $message }}</strong>
+							</span>
+							@enderror
+						</div>
+					</div>
+					<div class="single-resume-feild ">
+						<div class="single-input">
+							<label for="editE_additional_information">Información adicional: <span>(opcional)</span></label>
+							<textarea id="editE_additional_information" name="e_additional_information" class="form-control @error('e_additional_information') is-invalid @enderror" placeholder="Información adicional"></textarea>
+							@error('e_additional_information')
+							<span class="invalid-feedback" role="alert">
+								<strong>{{ $message }}</strong>
+							</span>
+							@enderror
+						</div>
+					</div>
+					<div class="submit-resume">
+						<button type="submit">Guardar</button>
+					</div>
+				</form>
+	      	</div>
+    	</div>
+  	</div>
+</div>
+
+
 @endsection
 
 @push('scripts')
@@ -515,6 +588,19 @@
 	$(".add-work-experience").on('click', function(e){
 		e.preventDefault();
 		modalWorExperience.modal();
+	})
+</script>
+
+<script>
+	let modalEditEducation;
+	let form;
+	modalEditEducation = $('#modalEditEducation');
+	formEdit = $('#formEditEducation')
+	$('.btn-edit').click(function(e){
+		e.preventDefault();
+		let route =  $(this).attr('route');
+		modalEditEducation.modal();
+		formEdit.action = "1";
 	})
 </script>
 @endpush

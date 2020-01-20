@@ -132,6 +132,10 @@ Route::group(['middleware' => ['auth', 'verified']], function(){
 
 		Route::post('/education', 'EducationController@store')->name('candidate.education.store')->middleware([sprintf("role:%s", \App\Role::CANDIDATE)]);
 
+		Route::get('/education/{education}', 'EducationController@edit')->name('candidate.education.edit')->middleware([sprintf("role:%s", \App\Role::CANDIDATE)]);
+
+		Route::put('/education/{education}', 'EducationController@update')->name('candidate.education.update')->middleware([sprintf("role:%s", \App\Role::CANDIDATE)]);
+
 		Route::delete('/education/{education}', 'EducationController@destroy')->name('candidate.education.destroy')->middleware([sprintf("role:%s", \App\Role::CANDIDATE)]);
 
 		Route::post('/work-experience', 'WorkExperienceController@store')->name('candidate.work-experience.store')->middleware([sprintf("role:%s", \App\Role::CANDIDATE)]);
