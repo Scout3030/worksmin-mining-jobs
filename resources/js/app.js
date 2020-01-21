@@ -20,6 +20,8 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('modal-edit-cv', require('./components/ModalEditCVComponent.vue').default);
+Vue.component('cv-detail', require('./components/CvDetailComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -29,4 +31,22 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 
 const app = new Vue({
     el: '#app',
+    data(){
+    	return {
+        		detail: {
+        			id: '',
+        			type: '',
+        			title: '',
+        			from: '',
+        			to: '',
+        			organization: '',
+        			additional: ''
+        		}
+        	}
+    },
+    methods: {
+    	getData(json){
+    		this.detail = json;
+    	}
+    }
 });

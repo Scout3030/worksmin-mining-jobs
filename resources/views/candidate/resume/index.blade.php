@@ -182,113 +182,27 @@
 		          
 					<div class="resume-box">
 						<h3>Educación</h3>
-						<a href="#" class="btn btn-block btn-outline-success add-education">
+						<button data-toggle="modal" data-target="#modalEducation" class="btn btn-block btn-outline-success">
 							<i class="fa fa-plus"></i> Agregar educación
-						</a>
+						</button>
 						<br>
 						<div id="educationForm">
 							
 						</div>
 						<br>
 						@foreach(auth()->user()->candidate->education as $education)
-						<div class="single-resume-feild ">
-							<div class="single-input">
-								<label for="degree">{{$education->degree}}</label>
-								<a href="#" class="btn btn-light btn-edit" title="Editar" route="{{ route('candidate.education.edit', $education->id) }}"><i class="fa fa-edit"></i></a>
-								<a href="{{ route('candidate.education.destroy', $education->id) }}"
-							       onclick="event.preventDefault();
-							       document.getElementById('delete-education-form').submit();"
-							       class="btn btn-light" title="Eliminar"
-							    >
-							        <i class="fa fa-close"></i>
-							    </a>
-								<form id="delete-education-form" action="{{ route('candidate.education.destroy', $education->id) }}" method="POST" style="display: none;">
-							        @csrf
-							        @method('DELETE')
-							    </form>
-							</div>
-						</div>
-						<div class="single-resume-feild feild-flex-2">
-							<div class="single-input">
-								<label for="e_from">Desde</label>
-								<br>
-								<p>{{$education->e_from}}</p>
-							</div>
-							<div class="single-input">
-								<label for="e_to">Hasta</label>
-								<br>
-								<p>{{$education->e_to}}</p>
-							</div>
-						</div>
-						<div class="single-resume-feild ">
-							<div class="single-input">
-								<label for="institution">Institución</label>
-								<br>
-								<p>{{$education->institution}}</p>
-							</div>
-						</div>
-						<div class="single-resume-feild ">
-							<div class="single-input">
-								<label for="e_additional_information">Información adicional</label>
-								<br>
-								<p>{{$education->e_additional_information}}</p>
-							</div>
-						</div>
-						<hr>
+						<cv-detail title="{{$education->degree}}" organization="{{$education->institution}}" from="{{$education->e_from}}" to="{{$education->e_to}}" additional="{{$education->e_additional_information}}" id="{{$education->id}}" type="1" v-on:datatomodal="getData($event)"></cv-detail>
 						@endforeach
 					</div>
 		          
 		            <div class="resume-box">
 		               	<h3>Experiencia de trabajo</h3>
-		               	<a href="#" class="btn btn-block btn-outline-success add-work-experience">
+		               	<a data-toggle="modal" data-target="#modalWorkingExperience" class="btn btn-block btn-outline-success">
 							<i class="fa fa-plus"></i> Agregar experiencia
 						</a>
 						<br>
 		               	@foreach(auth()->user()->candidate->WorkExperience as $experience)
-		               	<div class="single-resume-feild ">
-							<div class="single-input">
-								<label for="degree">{{$experience->title}}</label>
-								<a href="" class="btn btn-light" title="Editar"><i class="fa fa-edit"></i></a>
-								<a href="{{ route('candidate.work-experience.destroy', $experience->id) }}"
-							       onclick="event.preventDefault();
-							       document.getElementById('delete-work-experience-form').submit();"
-							       class="btn btn-light" title="Eliminar"
-							    >
-							        <i class="fa fa-close"></i>
-							    </a>
-								<form id="delete-work-experience-form" action="{{ route('candidate.work-experience.destroy', $experience->id) }}" method="POST" style="display: none;">
-							        @csrf
-							        @method('DELETE')
-							    </form>
-							</div>
-						</div>
-		               	<div class="single-resume-feild feild-flex-2">
-							<div class="single-input">
-								<label for="e_from">Desde</label>
-								<br>
-								<p>{{$experience->w_from}}</p>
-							</div>
-							<div class="single-input">
-								<label for="e_to">Hasta</label>
-								<br>
-								<p>{{$experience->w_to}}</p>
-							</div>
-						</div>
-						<div class="single-resume-feild ">
-							<div class="single-input">
-								<label for="company">Empresa</label>
-								<br>
-								<p>{{$experience->company}}</p>
-							</div>
-						</div>
-						<div class="single-resume-feild ">
-							<div class="single-input">
-								<label for="e_additional_information">Información adicional</label>
-								<br>
-								<p>{{$experience->w_additional_information}}</p>
-							</div>
-						</div>
-						<hr>
+		               	<cv-detail title="{{$experience->title}}" organization="{{$experience->company}}" from="{{$experience->w_from}}" to="{{$experience->w_to}}" additional="{{$experience->w_additional_information}}" id="{{$experience->id}}" type="2" v-on:datatomodal="getData($event)"></cv-detail>
 		               @endforeach
 		            </div>
 		      	</div>
@@ -369,7 +283,7 @@
 
 
 <!-- Modal WORK EXPERIENCE-->
-<div class="modal fade" id="modalWorkExperience" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="modalWorkingExperience" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     	<div class="modal-content">
 	      	<div class="modal-body">
@@ -437,78 +351,7 @@
   	</div>
 </div>
 
-
-
-<!-- Modal EDIT EDUCATION-->
-<div class="modal fade" id="modalEditEducation" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-    	<div class="modal-content">
-	      	<div class="modal-body">
-		        <form action="#" method="POST" id="formEditEducation" novalidate>
-		        	@csrf
-		        	@method('put')
-					<div class="single-resume-feild ">
-						<div class="single-input">
-							<label for="editDegree">Grado obtenido</label>
-							<input id="editDegree" type="text" class="form-control @error('degree') is-invalid @enderror" name="degree" value="{{ old('degree')}}" autocomplete="false" placeholder="Grado obtenido">
-							@error('degree')
-							<span class="invalid-feedback" role="alert">
-								<strong>{{ $message }}</strong>
-							</span>
-							@enderror
-						</div>
-					</div>
-					<div class="single-resume-feild feild-flex-2">
-						<div class="single-input">
-							<label for="editE_from">Desde</label>
-							<input type="text" id="editE_from" class="datepicker form-control @error('e_from') is-invalid @enderror" name="e_from">
-							@error('e_from')
-							<span class="invalid-feedback" role="alert">
-								<strong>{{ $message }}</strong>
-							</span>
-							@enderror
-						</div>
-						<div class="single-input">
-							<label for="editE_to">Hasta</label>
-							<input type="text" id="editE_to" class="datepicker form-control @error('e_to') is-invalid @enderror" name="e_to">
-							@error('e_to')
-							<span class="invalid-feedback" role="alert">
-								<strong>{{ $message }}</strong>
-							</span>
-							@enderror
-						</div>
-					</div>
-					<div class="single-resume-feild ">
-						<div class="single-input">
-							<label for="editInstitution"> Institución:</label>
-							<input id="editInstitution" type="text" class="form-control @error('institution') is-invalid @enderror" name="institution" value="{{ old('institution') }}" autocomplete="false" placeholder="Institución">
-							@error('institution')
-							<span class="invalid-feedback" role="alert">
-								<strong>{{ $message }}</strong>
-							</span>
-							@enderror
-						</div>
-					</div>
-					<div class="single-resume-feild ">
-						<div class="single-input">
-							<label for="editE_additional_information">Información adicional: <span>(opcional)</span></label>
-							<textarea id="editE_additional_information" name="e_additional_information" class="form-control @error('e_additional_information') is-invalid @enderror" placeholder="Información adicional"></textarea>
-							@error('e_additional_information')
-							<span class="invalid-feedback" role="alert">
-								<strong>{{ $message }}</strong>
-							</span>
-							@enderror
-						</div>
-					</div>
-					<div class="submit-resume">
-						<button type="submit">Guardar</button>
-					</div>
-				</form>
-	      	</div>
-    	</div>
-  	</div>
-</div>
-
+<modal-edit-cv></modal-edit-cv>
 
 @endsection
 
@@ -569,25 +412,6 @@
 		      }
 		    })
 		})
-	})
-</script>
-
-
-<script>
-	let modalEducation;
-	modalEducation = $('#modalEducation');
-
-	$(".add-education").on('click', function(e){
-		e.preventDefault();
-		modalEducation.modal();
-	})
-
-	let modalWorExperience;
-	modalWorExperience = $('#modalWorkExperience');
-
-	$(".add-work-experience").on('click', function(e){
-		e.preventDefault();
-		modalWorExperience.modal();
 	})
 </script>
 
