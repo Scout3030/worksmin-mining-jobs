@@ -51,7 +51,7 @@ class EducationController extends Controller
      */
     public function show(Education $education)
     {
-        //
+        return response()->json($education, 200);
     }
 
     /**
@@ -60,10 +60,11 @@ class EducationController extends Controller
      * @param  \App\Education  $education
      * @return \Illuminate\Http\Response
      */
-    public function edit(Education $education)
-    {
-        //
-    }
+    // public function edit(Education $education)
+    // {
+    //     dd(1);
+    //     return response()->json($education, 200);
+    // }
 
     /**
      * Update the specified resource in storage.
@@ -74,7 +75,15 @@ class EducationController extends Controller
      */
     public function update(Request $request, Education $education)
     {
-        //
+        $request->merge(['degree' => $request['title']]);
+        $request->merge(['e_from' => $request['from']]);
+        $request->merge(['e_to' => $request['to']]);
+        $request->merge(['institution' => $request['organization']]);
+        $request->merge(['e_additional_information' => $request['additional']]);
+        $input = $request->except(['type', 'title', 'from', 'to', 'organization', 'additional']);
+
+        $education->fill($input)->save();
+        return response()->json('Datos actualizados correctamente', 200);
     }
 
     /**
@@ -86,6 +95,6 @@ class EducationController extends Controller
     public function destroy(Education $education)
     {
         $education->delete();
-        return back()->with('message', ['status' => 'success', 'message' => "Información de educación borrada correctamente"]);
+        return response()->json('Datos borrados correctamente', 200);
     }
 }
