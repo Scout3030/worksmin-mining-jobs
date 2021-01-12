@@ -51,6 +51,7 @@ class WorkExperienceController extends Controller
      */
     public function show(WorkExperience $workExperience)
     {
+        dd($workExperience);
         return response()->json($workExperience, 200);
     }
 
@@ -85,7 +86,8 @@ class WorkExperienceController extends Controller
      */
     public function destroy(WorkExperience $workExperience)
     {
+        return $workExperience;
         $workExperience->delete();
-        return back()->with('message', ['status' => 'success', 'message' => "Información de experiencia de trabajo borrada correctamente"]);
+        return response()->json('Datos borrados correctamente', 200);
     }
 }

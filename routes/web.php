@@ -57,7 +57,7 @@ Route::get('/search/{keyword}', 'JobController@keywordGet')->name('job.keyword.g
 
 Route::get('/date/{date}', 'JobController@date')->name('job.date');
 
-Route::get('/type/{type}', 'JobController@jobByType')->name('job.by.type');
+// Route::get('/type/{type}', 'JobController@jobByType')->name('job.by.type');
 
 
 Route::post('/searchAjax', 'JobController@searchAyax')->name('search.ajax');

@@ -16,8 +16,14 @@ use Illuminate\Http\Request;
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
-
-Route::apiResource('education', 'EducationController');
-
 Route::apiResource('experience', 'WorkExperienceController');
+Route::apiResource('education', 'EducationController');
+Route::apiResource('department', 'DepartmentController');
+Route::apiResource('category', 'CategoryController');
+Route::apiResource('subcategory', 'SubcategoryController');
+Route::apiResource('type', 'JobTypeController');
+
+Route::get('/types/{type}', 'JobController@jobByType')->name('job.by.type');
+
+
 

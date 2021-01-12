@@ -169,18 +169,1186 @@ class DatabaseSeeder extends Seeder
             'slug' => 'ucayali'
         ]);
 
-        factory(App\Province::class, 30)->create();
-
         factory(App\Province::class, 1)->create([
             'department_id' => 1,
-            'province' => 'Sanchez Carrión'
-            'slug' => 'sanchez-carrion'
+            'province' => 'Bagua',
+            'slug' => 'bagua'
         ]);
 
         factory(App\Province::class, 1)->create([
             'department_id' => 1,
-            'province' => 'Trujillo'
+            'province' => 'Bongará',
+            'slug' => 'bongara'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 1,
+            'province' => 'Chachapoyas',
+            'slug' => 'chachapoyas'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 1,
+            'province' => 'Condorcanqui',
+            'slug' => 'condorcanqui'
+        ]);
+        factory(App\Province::class, 1)->create([
+            'department_id' => 1,
+            'province' => 'Luya',
+            'slug' => 'luya'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 1,
+            'province' => 'Rodríguez de Mendoza',
+            'slug' => 'rodriguez-de-mendoza'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 1,
+            'province' => 'Utcubamba',
+            'slug' => 'utcubamba'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 2,
+            'province' => 'Aija',
+            'slug' => 'aija'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 2,
+            'province' => 'Antonio Raymondi',
+            'slug' => 'antonio-raymondi'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 2,
+            'province' => 'Asunción',
+            'slug' => 'asuncion'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 2,
+            'province' => 'Bolognesi',
+            'slug' => 'bolognesi'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 2,
+            'province' => 'Carhuaz',
+            'slug' => 'carhuaz'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 2,
+            'province' => 'Carlos F Fitzcarrald',
+            'slug' => 'carlos-f-fitzcarrald'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 2,
+            'province' => 'Casma',
+            'slug' => 'casma'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 2,
+            'province' => 'Corongo',
+            'slug' => 'corongo'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 2,
+            'province' => 'Huaraz',
+            'slug' => 'huaraz'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 2,
+            'province' => 'Huari',
+            'slug' => 'huari'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 2,
+            'province' => 'Huarmey',
+            'slug' => 'huarmey'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 2,
+            'province' => 'Huaylas',
+            'slug' => 'huaylas'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 2,
+            'province' => 'Mariscal-Luzuriaga',
+            'slug' => 'mariscal-luzuriaga'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 2,
+            'province' => 'Ocros',
+            'slug' => 'ocros'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 2,
+            'province' => 'Pallasca',
+            'slug' => 'pallasca'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 2,
+            'province' => 'Pomabamba',
+            'slug' => 'pomabamba'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 2,
+            'province' => 'Recuay',
+            'slug' => 'recuay'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 2,
+            'province' => 'Santa',
+            'slug' => 'santa'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 2,
+            'province' => 'Sihuas',
+            'slug' => 'sihuas'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 2,
+            'province' => 'Yungay',
+            'slug' => 'yungay'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 3,
+            'province' => 'Abancay',
+            'slug' => 'abancay'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 3,
+            'province' => 'Andahuaylas',
+            'slug' => 'andahuaylas'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 3,
+            'province' => 'Antabamba',
+            'slug' => 'antabamba'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 3,
+            'province' => 'Aymaraes',
+            'slug' => 'aymaraes'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 3,
+            'province' => 'Cotabambas',
+            'slug' => 'cotabambas'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 3,
+            'province' => 'Chincheros',
+            'slug' => 'chincheros'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 3,
+            'province' => 'Grau',
+            'slug' => 'grau'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 4,
+            'province' => 'Arequipa',
+            'slug' => 'arequipa'
+        ]);
+
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 4,
+            'province' => 'Camaná',
+            'slug' => 'camana'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 4,
+            'province' => 'Caravelí',
+            'slug' => 'caraveli'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 4,
+            'province' => 'Castilla',
+            'slug' => 'castilla'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 4,
+            'province' => 'Caylloma',
+            'slug' => 'caylloma'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 4,
+            'province' => 'Condesuyos',
+            'slug' => 'condesuyos'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 4,
+            'province' => 'Islay',
+            'slug' => 'islay'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 4,
+            'province' => 'La Unión',
+            'slug' => 'la-union'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 5,
+            'province' => 'Cangallo',
+            'slug' => 'cangallo'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 5,
+            'province' => 'Huamanga',
+            'slug' => 'huamanga'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 5,
+            'province' => 'Huanca Sancos',
+            'slug' => 'huanca-sancos'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 5,
+            'province' => 'Huanta',
+            'slug' => 'huanta'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 5,
+            'province' => 'La Mar',
+            'slug' => 'la-mar'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 5,
+            'province' => 'Lucanas',
+            'slug' => 'lucanas'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 5,
+            'province' => 'Parinacochas',
+            'slug' => 'parinacochas'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 5,
+            'province' => 'Páucar del Sara Sara',
+            'slug' => 'paucar-del-sara-sara'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 5,
+            'province' => 'Sucre',
+            'slug' => 'sucre'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 5,
+            'province' => 'Victor Fajardo',
+            'slug' => 'victor-fajardo'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 5,
+            'province' => 'Parinacochas',
+            'slug' => 'parinacochas'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 5,
+            'province' => 'Vilcashuamán',
+            'slug' => 'vilcashuaman'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 6,
+            'province' => 'Cajamarca',
+            'slug' => 'cajamarca'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 6,
+            'province' => 'Cajabamba',
+            'slug' => 'cajabamba'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 6,
+            'province' => 'Celendín',
+            'slug' => 'celendin'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 6,
+            'province' => 'Chota',
+            'slug' => 'chota'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 6,
+            'province' => 'Contumazá',
+            'slug' => 'contumaza'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 6,
+            'province' => 'Cutervo',
+            'slug' => 'cutervo'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 6,
+            'province' => 'Hualgayoc',
+            'slug' => 'hualgayoc'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 6,
+            'province' => 'Jaén',
+            'slug' => 'jaen'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 6,
+            'province' => 'San Ignacio',
+            'slug' => 'san-ignacio'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 6,
+            'province' => 'San Marcos',
+            'slug' => 'san-marcos'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 6,
+            'province' => 'San Miguel',
+            'slug' => 'san-miguel'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 6,
+            'province' => 'San Pablo',
+            'slug' => 'san-pablo'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 6,
+            'province' => 'Santa Cruz',
+            'slug' => 'santa-cruz'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 7,
+            'province' => 'Callao',
+            'slug' => 'callao'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 8,
+            'province' => 'Acomayo',
+            'slug' => 'acomayo'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 8,
+            'province' => 'Anta',
+            'slug' => 'anta'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 8,
+            'province' => 'Calca',
+            'slug' => 'calca'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 8,
+            'province' => 'Canas',
+            'slug' => 'canas'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 8,
+            'province' => 'Canchis',
+            'slug' => 'canchis'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 8,
+            'province' => 'Chumbivilcas',
+            'slug' => 'chumbivilcas'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 8,
+            'province' => 'Espinar',
+            'slug' => 'espinar'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 8,
+            'province' => 'Cuzco',
+            'slug' => 'cuzco'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 8,
+            'province' => 'La Convensión',
+            'slug' => 'la-convension'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 8,
+            'province' => 'Paruro',
+            'slug' => 'paruro'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 8,
+            'province' => 'Paucartambo',
+            'slug' => 'paucartambo'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 8,
+            'province' => 'Quispicanchi',
+            'slug' => 'quispicanchi'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 8,
+            'province' => 'Urubamba',
+            'slug' => 'urubamba'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 9,
+            'province' => 'Acobamba',
+            'slug' => 'acobamba'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 9,
+            'province' => 'Angaraes',
+            'slug' => 'angaraes'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 9,
+            'province' => 'Castrovirreyna',
+            'slug' => 'castrovirreyna'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 9,
+            'province' => 'Churcampa',
+            'slug' => 'churcampa'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 9,
+            'province' => 'Huancavelica',
+            'slug' => 'huancavelica'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 9,
+            'province' => 'Huaytará',
+            'slug' => 'huaytara'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 9,
+            'province' => 'Tayacaja',
+            'slug' => 'tayacaja'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 10,
+            'province' => 'Ambo',
+            'slug' => 'ambo'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 10,
+            'province' => 'Dos de Mayo',
+            'slug' => 'dos-de-mayo'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 10,
+            'province' => 'Huancaybamba',
+            'slug' => 'huancaybamba'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 10,
+            'province' => 'Huamalíes',
+            'slug' => 'huamalies'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 10,
+            'province' => 'Huánuco',
+            'slug' => 'huanuco'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 10,
+            'province' => 'Lauricocha',
+            'slug' => 'lauricocha'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 10,
+            'province' => 'Leoncio Prado',
+            'slug' => 'leoncio-prado'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 10,
+            'province' => 'Marañón',
+            'slug' => 'marañon'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 10,
+            'province' => 'Pachitea',
+            'slug' => 'pachitea'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 10,
+            'province' => 'Puerto Inca',
+            'slug' => 'puerto-inca'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 10,
+            'province' => 'Yarowilca',
+            'slug' => 'yarowilca'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 11,
+            'province' => 'Chincha',
+            'slug' => 'chincha'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 11,
+            'province' => 'Ica',
+            'slug' => 'ica'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 11,
+            'province' => 'Nazca',
+            'slug' => 'nazca'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 11,
+            'province' => 'Palpa',
+            'slug' => 'palpa'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 11,
+            'province' => 'Pisco',
+            'slug' => 'pisco'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 12,
+            'province' => 'Chanchamayo',
+            'slug' => 'chanchamayo'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 12,
+            'province' => 'Chupaca',
+            'slug' => 'chupaca'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 12,
+            'province' => 'Concepción',
+            'slug' => 'concepcion'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 12,
+            'province' => 'Huancayo',
+            'slug' => 'huancayo'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 12,
+            'province' => 'Jauja',
+            'slug' => 'jauja'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 12,
+            'province' => 'Junín',
+            'slug' => 'junin'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 12,
+            'province' => 'Satipo',
+            'slug' => 'satipo'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 12,
+            'province' => 'Tarma',
+            'slug' => 'tarma'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 12,
+            'province' => 'Yauli',
+            'slug' => 'yauli'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 13,
+            'province' => 'Ascope',
+            'slug' => 'ascope'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 13,
+            'province' => 'Bolivar',
+            'slug' => 'bolivar'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 13,
+            'province' => 'Chepén',
+            'slug' => 'chepen'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 13,
+            'province' => 'Gran Chimú',
+            'slug' => 'gran-chimu'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 13,
+            'province' => 'Julcán',
+            'slug' => 'julcan'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 13,
+            'province' => 'Otuzco',
+            'slug' => 'otuzco'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 13,
+            'province' => 'Pacasmayo',
+            'slug' => 'pacasmayo'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 13,
+            'province' => 'Pataz',
+            'slug' => 'pataz'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 13,
+            'province' => 'Sánchez Carrión',
+            'slug' => 'sanchez-carrion'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 13,
+            'province' => 'Santiago de Chuco',
+            'slug' => 'santiago-de-chuco'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 13,
+            'province' => 'Trujillo',
             'slug' => 'trujillo'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 13,
+            'province' => 'Virú',
+            'slug' => 'viru'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 14,
+            'province' => 'Chiclayo',
+            'slug' => 'chiclayo'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 14,
+            'province' => 'Ferreñafe',
+            'slug' => 'ferrenafe'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 14,
+            'province' => 'Lambayeque',
+            'slug' => 'lambayeque'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 15,
+            'province' => 'Barranca',
+            'slug' => 'barranca'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 15,
+            'province' => 'Cajatambo',
+            'slug' => 'cajatambo'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 15,
+            'province' => 'Cañete',
+            'slug' => 'canete'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 15,
+            'province' => 'Canta',
+            'slug' => 'canta'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 15,
+            'province' => 'Huaral',
+            'slug' => 'huaral'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 15,
+            'province' => 'Huarochiri',
+            'slug' => 'huarochiri'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 15,
+            'province' => 'Huaura',
+            'slug' => 'huaura'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 15,
+            'province' => 'Lima',
+            'slug' => 'lima'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 15,
+            'province' => 'Oyón',
+            'slug' => 'oyon'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 15,
+            'province' => 'Yauyos',
+            'slug' => 'yauyos'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 16,
+            'province' => 'Alto Amazonas',
+            'slug' => 'alto-amazonas'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 16,
+            'province' => 'Datem del Marañón',
+            'slug' => 'datem-del-marañón'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 16,
+            'province' => 'Loreto',
+            'slug' => 'loreto'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 16,
+            'province' => 'Mariscal Ramón Castilla',
+            'slug' => 'mariscal-ramon-castilla'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 16,
+            'province' => 'Maynas',
+            'slug' => 'maynas'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 16,
+            'province' => 'Putumayo',
+            'slug' => 'putumayo'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 16,
+            'province' => 'Requena',
+            'slug' => 'requena'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 16,
+            'province' => 'Ucayali',
+            'slug' => 'ucayali'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 17,
+            'province' => 'Manu',
+            'slug' => 'manu'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 17,
+            'province' => 'Tahuamanu',
+            'slug' => 'tahuamanu'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 17,
+            'province' => 'Tambopata',
+            'slug' => 'tambopata'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 18,
+            'province' => 'General Sánchez Cerro',
+            'slug' => 'general-sanchez-cerro'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 18,
+            'province' => 'Ilo',
+            'slug' => 'ilo'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 18,
+            'province' => 'Mariscal Nieto',
+            'slug' => 'mariscal-nieto'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 19,
+            'province' => 'Daniel A. Carrión',
+            'slug' => 'daniel-a-carrion'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 19,
+            'province' => 'Oxapampa',
+            'slug' => 'oxapampa'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 19,
+            'province' => 'Pasco',
+            'slug' => 'pasco'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 20,
+            'province' => 'Ayabaca',
+            'slug' => 'ayabaca'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 20,
+            'province' => 'Huancabamba',
+            'slug' => 'huancabamba'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 20,
+            'province' => 'Morropón',
+            'slug' => 'morropon'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 20,
+            'province' => 'Paita',
+            'slug' => 'paita'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 20,
+            'province' => 'Piura',
+            'slug' => 'piura'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 20,
+            'province' => 'Sechura',
+            'slug' => 'sechura'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 20,
+            'province' => 'Sullana',
+            'slug' => 'sullana'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 20,
+            'province' => 'Talara',
+            'slug' => 'talara'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 21,
+            'province' => 'Azángaro',
+            'slug' => 'azangaro'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 21,
+            'province' => 'Carabaya',
+            'slug' => 'carabaya'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 21,
+            'province' => 'Chucuito',
+            'slug' => 'chucuito'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 21,
+            'province' => 'El Collao',
+            'slug' => 'el-collao'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 21,
+            'province' => 'Huancané',
+            'slug' => 'huancane'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 21,
+            'province' => 'Lampa',
+            'slug' => 'lampa'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 21,
+            'province' => 'Melgar',
+            'slug' => 'melgar'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 21,
+            'province' => 'Moho',
+            'slug' => 'moho'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 21,
+            'province' => 'Puno',
+            'slug' => 'puno'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 21,
+            'province' => 'San Antonio de Putina',
+            'slug' => 'san-antonio-de-putina'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 21,
+            'province' => 'San Román',
+            'slug' => 'san-roman'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 21,
+            'province' => 'Sandia',
+            'slug' => 'sandia'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 21,
+            'province' => 'Yunguyo',
+            'slug' => 'yunguyo'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 22,
+            'province' => 'Bellavista',
+            'slug' => 'bellavista'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 22,
+            'province' => 'El Dorado',
+            'slug' => 'el-dorado'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 22,
+            'province' => 'Huallaga',
+            'slug' => 'huallaga'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 22,
+            'province' => 'Lamas',
+            'slug' => 'lamas'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 22,
+            'province' => 'Mariscal Cáceres',
+            'slug' => 'mariscal-caceres'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 22,
+            'province' => 'Moyobamba',
+            'slug' => 'moyobamba'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 22,
+            'province' => 'Picota',
+            'slug' => 'picota'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 22,
+            'province' => 'Rioja',
+            'slug' => 'rioja'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 22,
+            'province' => 'San Martín',
+            'slug' => 'san-martin'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 23,
+            'province' => 'Tocache',
+            'slug' => 'tocache'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 23,
+            'province' => 'Candarave',
+            'slug' => 'candarave'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 23,
+            'province' => 'Jorge Basadre',
+            'slug' => 'jorge-basadre'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 23,
+            'province' => 'Tacna',
+            'slug' => 'tacna'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 23,
+            'province' => 'Tarata',
+            'slug' => 'tarata'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 24,
+            'province' => 'Tumbes',
+            'slug' => 'tumbes'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 24,
+            'province' => 'Zarumilla',
+            'slug' => 'zarumilla'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 24,
+            'province' => 'Contralmirante Villar',
+            'slug' => 'contralmirante-villar'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 25,
+            'province' => 'Atalaya',
+            'slug' => 'atalaya'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 25,
+            'province' => 'Coronel Portillo',
+            'slug' => 'coronel-portillo'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 25,
+            'province' => 'Padre Abad',
+            'slug' => 'padre-abad'
+        ]);
+
+        factory(App\Province::class, 1)->create([
+            'department_id' => 25,
+            'province' => 'Purús',
+            'slug' => 'purus'
         ]);
 
         factory(App\Skill::class, 20)->create();

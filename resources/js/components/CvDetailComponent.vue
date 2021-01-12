@@ -78,6 +78,7 @@
         			url = `${url}/experience`;
         		}
         		const data = await fetch(`${url}/${id}`);
+        		console.log("data", data);
         		const json = await data.json();
 
         		if (type == 1) {

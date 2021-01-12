@@ -13,7 +13,7 @@
  <div class="container">
     <div class="row">
 
-       @include('job.filter')
+       <filter-component></filter-component> 
 
        <div class="col-md-12 col-lg-9">
           <div class="job-grid-right">

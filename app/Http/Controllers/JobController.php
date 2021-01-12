@@ -103,7 +103,7 @@ class JobController extends Controller
                         ->paginate(10);
         }
         
-        return view('job.list', compact('jobs'));
+        return response()->json($jobs, 200);
     }
 
     public function keywordCategoryPost(Request $request)

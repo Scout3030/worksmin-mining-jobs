@@ -22,6 +22,7 @@ window.Vue = require('vue');
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('modal-edit-cv', require('./components/ModalEditCVComponent.vue').default);
 Vue.component('cv-detail', require('./components/CvDetailComponent.vue').default);
+Vue.component('filter-component', require('./components/FilterComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

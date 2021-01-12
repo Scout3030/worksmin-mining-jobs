@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\JobType;
+use App\Category;
 use Illuminate\Http\Request;
 
-class JobTypeController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class JobTypeController extends Controller
      */
     public function index()
     {
-        $types = JobType::get();
-        return response()->json($types, 200);
+        $categories = Category::get();
+        return response()->json($categories, 200);
     }
 
     /**
@@ -42,10 +42,10 @@ class JobTypeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\JobType  $jobType
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(JobType $jobType)
+    public function show($id)
     {
         //
     }
@@ -53,10 +53,10 @@ class JobTypeController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\JobType  $jobType
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(JobType $jobType)
+    public function edit($id)
     {
         //
     }
@@ -65,10 +65,10 @@ class JobTypeController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\JobType  $jobType
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, JobType $jobType)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -76,10 +76,10 @@ class JobTypeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\JobType  $jobType
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(JobType $jobType)
+    public function destroy($id)
     {
         //
     }

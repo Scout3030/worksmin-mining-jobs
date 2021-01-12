@@ -14,7 +14,8 @@ class SubcategoryController extends Controller
      */
     public function index()
     {
-        //
+        $subcategories = Subcategory::get();
+        return response()->json($subcategories, 200);
     }
 
     /**

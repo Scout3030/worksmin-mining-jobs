@@ -14,7 +14,8 @@ class DepartmentController extends Controller
      */
     public function index()
     {
-        //
+        $departments = Department::get();
+        return response()->json($departments, 200);
     }
 
     /**
